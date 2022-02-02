@@ -13,8 +13,8 @@ export class AuthService {
     return await this.auth.signInWithEmailAndPassword(email, password);
   }
 
-  async getUser() {
-    return await this.auth.authState;
+  getUser() {
+    return this.auth.authState;
   }
 
   async signOut() {
