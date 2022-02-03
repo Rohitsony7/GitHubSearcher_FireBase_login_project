@@ -32,7 +32,7 @@ export class SignUpComponent implements OnInit {
       })
       .catch((err) => {
         console.error(err.message);
-        this.ToastrService.error('SignUp failed');
+        this.ToastrService.error(err.message);
       });
   }
 }
