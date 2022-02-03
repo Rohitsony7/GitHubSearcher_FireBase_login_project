@@ -1,1 +1,24 @@
-<p>usercard works!</p>
+<div class="card user-card text-white">
+  <div class="background bg-info">
+    <img
+      class="img-fluid rounded-circle profile-pic border-white"
+      [src]="user.avatar_url"
+      alt=""
+    />
+  </div>
+
+  <div class="card-body">
+    <h5 class="card-title">
+      {{ user?.name }}
+    </h5>
+
+    <p class="card-text">Bio: {{ user?.bio }}</p>
+    <p class="card-text">Company : {{ user?.company }}</p>
+    <p class="card-text">updated_at : {{ user?.updated_at | date: "short" }}</p>
+    <p class="card-text">
+      <i class="fab fa-twitter"></i>
+
+      {{ user?.twitter_username }}
+    </p>
+  </div>
+</div>
