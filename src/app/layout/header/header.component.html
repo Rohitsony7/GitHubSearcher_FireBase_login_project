@@ -19,7 +19,7 @@
       <div *ngIf="email" class="navbar-text float-left">
         {{ email }}
       </div>
-      <a class="nav-item nav-link" [routerLink]="['/']">Home</a>
+      <a *ngIf="email" class="nav-item nav-link" [routerLink]="['/']">Home </a>
       <a
         *ngIf="!email"
         class="nav-item nav-link"
@@ -34,9 +34,14 @@
         [routerLink]="['/signup']"
         >Signup</a
       >
-      <a *ngIf="email" class="nav-item nav-link" (click)="handleSignOut()"
-        >Logout</a
+      <button
+        type="button"
+        class="btn btn-primary"
+        *ngIf="email"
+        (click)="handleSignOut()"
       >
+        Logout
+      </button>
     </div>
   </div>
 </nav>

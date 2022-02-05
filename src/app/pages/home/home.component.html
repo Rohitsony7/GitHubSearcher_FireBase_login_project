@@ -1,19 +1,21 @@
-<div class="container">
+<div class="container background bg-light p-2" style="margin: 10px auto">
   <form
-    class="form-inline mt-4 d-flex justify-content-center"
+    class="form-inline mt-4 d-flex justify-content-between"
     (ngSubmit)="handleFind()"
   >
-    <div class="form-group">
-      <label for="userName">User Name</label>
+    <div class="form-group d-flex mx-10" style="flex: 1">
       <input
         [(ngModel)]="userName"
         type="text"
         id="userName"
-        class="form-control mx-sm-3"
+        class="form-control"
         name="userName"
+        placeholder="Enter Git-hub user id..."
       />
     </div>
-    <button type="submit" class="btn btn-primary mb-2">Find User</button>
+    <button type="submit" class="btn btn-primary" style="margin-left: 10px">
+      Find User
+    </button>
   </form>
 
   <!-- to render error -->
@@ -25,7 +27,7 @@
     <div class="col col-md-4">
       <app-usercard *ngIf="user" [user]="user"></app-usercard>
     </div>
-    <div class="col col-md-8">
+    <div class="col col-md-8 overflow-auto" style="height: 583px">
       <app-repos *ngIf="user" [repoUrl]="user?.repos_url"></app-repos>
     </div>
   </div>

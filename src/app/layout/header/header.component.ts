@@ -33,25 +33,27 @@ export class HeaderComponent implements OnInit {
 
   //handled promise
   handleSignOut() {
-    this.AuthService.signOut()
-      .then((res) => {
-        console.log('sign out success', res);
-      })
-      .then(() => {
-        this.Router.navigateByUrl('/signin');
-      })
-      .then(() => {
-        this.ToastrService.info('Login again to continue.');
-      })
-      .then(() => {
-        this.email = null;
-      })
-      .catch((err) => {
-        console.error('error >>>>', err);
-        this.ToastrService.error('Something went wrong !!');
-      })
-      .finally(() => {
-        console.log('sign out mehtod done...');
-      });
+    if (window.confirm('Confirm logout !') == true) {
+      this.AuthService.signOut()
+        .then((res) => {
+          console.log('sign out success', res);
+        })
+        .then(() => {
+          this.Router.navigateByUrl('/signin');
+        })
+        .then(() => {
+          this.ToastrService.info('Logout sccessful !');
+        })
+        .then(() => {
+          this.email = null;
+        })
+        .catch((err) => {
+          console.error('error >>>>', err);
+          this.ToastrService.error('Something went wrong !!');
+        })
+        .finally(() => {
+          console.log('sign out mehtod done...');
+        });
+    }
   }
 }

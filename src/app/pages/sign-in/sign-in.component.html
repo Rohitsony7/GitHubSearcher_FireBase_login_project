@@ -9,7 +9,7 @@
         <div class="card-body">
           <!-- new way to handle form -->
           <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-            <div class="form-group row">
+            <div class="form-group row p-2">
               <label for="email" class="col-sm-3 col-form-label">Email</label>
               <div class="col-sm-9">
                 <!-- user ngModel only if in form you have ngForm -->
@@ -25,7 +25,7 @@
               </div>
             </div>
 
-            <div class="form-group row">
+            <div class="form-group row p-2">
               <label for="password" class="col-sm-3 col-form-label"
                 >Password</label
               >
@@ -39,14 +39,14 @@
                   placeholder="Enter password"
                   required
                 />
-                <small id="emailHelp" class="form-text text-muted"
+                <small id="emailHelp" class="form-text text-muted1 p-2"
                   >Minimum length of the password should be 6 or more</small
                 >
               </div>
             </div>
 
-            <div class="text-center">
-              <button class="btn btn-primary" type="submit">Sign Up</button>
+            <div class="text-end">
+              <button class="btn btn-primary" type="submit">Sign In</button>
             </div>
           </form>
         </div>

@@ -1,0 +1,4 @@
+.list-group:hover {
+  transition: 0.3s;
+  transform: scale(1.03);
+}
