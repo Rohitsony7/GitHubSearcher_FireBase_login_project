@@ -31,7 +31,7 @@ export class ReposComponent implements OnInit, OnChanges {
       this.GithubService.getUserRepo(this.repoUrl).subscribe({
         next: (res) => {
           this.repos = res;
-          // this.ref.detectChanges();
+          this.ref.detectChanges();
           console.table(this.repos);
         },
         error: (err) => {
