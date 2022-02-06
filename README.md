@@ -28,7 +28,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # snapshots of the project.
 
-1. <img width="1440" alt="Screenshot 2022-02-06 at 4 30 24 AM" src="https://user-images.githubusercontent.com/31543760/152682014-9811060e-015a-4acd-8cd5-d57a862a2708.png">
+
+
+1.
+
+<img width="1440" alt="Screenshot 2022-02-06 at 4 30 24 AM" src="https://user-images.githubusercontent.com/31543760/152682014-9811060e-015a-4acd-8cd5-d57a862a2708.png">
 
 2. 
 
