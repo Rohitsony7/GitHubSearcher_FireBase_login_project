@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './services/auth.service';
+import { LoadingService } from './services/loading.service';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,11 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'github-login-firebase';
-  constructor(private AuthService: AuthService) {
+
+  constructor(
+    private AuthService: AuthService,
+    private loader: LoadingService
+  ) {
     this.AuthService.getUser().subscribe({
       next: (user) => {
         console.log(user);
@@ -18,4 +23,6 @@ export class AppComponent {
       },
     });
   }
+
+  loading$ = this.loader.loading$;
 }

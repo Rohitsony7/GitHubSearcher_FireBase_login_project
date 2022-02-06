@@ -1,4 +1,4 @@
-<div class="container background bg-light" style="margin: 10px auto">
+<div class="container background bg-light pt-2" style="margin: 10px auto">
   <form
     class="form-inline mt-2 d-flex justify-content-between"
     (ngSubmit)="handleFind()"
@@ -27,7 +27,10 @@
     <div class="col col-md-4">
       <app-usercard *ngIf="user" [user]="user"></app-usercard>
     </div>
-    <div class="col col-md-8 overflow-auto" style="height: 583px">
+    <div
+      class="col col-md-8 overflow-auto"
+      style="height: 570px; margin-bottom: 10px"
+    >
       <app-repos *ngIf="user" [repoUrl]="user?.repos_url"></app-repos>
     </div>
   </div>

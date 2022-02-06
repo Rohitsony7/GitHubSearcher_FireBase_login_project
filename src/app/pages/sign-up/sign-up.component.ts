@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { throwError } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
+import { LoadingService } from 'src/app/services/loading.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -16,12 +17,14 @@ export class SignUpComponent implements OnInit {
   constructor(
     private ToastrService: ToastrService,
     private AuthService: AuthService,
-    private Router: Router
+    private Router: Router,
+    private LoadingService: LoadingService
   ) {}
 
   ngOnInit(): void {}
 
   onSubmit(f: NgForm) {
+    this.LoadingService.show();
     const { email, password } = f.form.value;
 
     // checking and validating email, password handled by firebase
@@ -43,6 +46,9 @@ export class SignUpComponent implements OnInit {
           this.errorMsg = this.getServerErrorMessage(error);
         }
         this.ToastrService.error(this.errorMsg);
+      })
+      .finally(() => {
+        this.LoadingService.hide();
       });
   }
 

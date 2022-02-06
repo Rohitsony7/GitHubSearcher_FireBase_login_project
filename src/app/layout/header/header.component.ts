@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
+import { LoadingService } from 'src/app/services/loading.service';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     private AuthService: AuthService,
     private ToastrService: ToastrService,
-    private Router: Router
+    private Router: Router,
+    private LoadingService: LoadingService
   ) {
     // latest rxJs with subscribe
     //handled Observable
@@ -34,6 +36,7 @@ export class HeaderComponent implements OnInit {
   //handled promise
   handleSignOut() {
     if (window.confirm('Confirm logout !') == true) {
+      this.LoadingService.show();
       this.AuthService.signOut()
         .then((res) => {
           console.log('sign out success', res);
@@ -53,6 +56,7 @@ export class HeaderComponent implements OnInit {
         })
         .finally(() => {
           console.log('sign out mehtod done...');
+          this.LoadingService.hide();
         });
     }
   }
