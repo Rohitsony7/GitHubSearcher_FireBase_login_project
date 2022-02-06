@@ -38,7 +38,7 @@ export class ReposComponent implements OnInit, OnChanges {
           console.log('>>> Error >>>', err);
           this.ToastrService.error(err);
         },
-        complete: () => console.log('Get user done...'),
+        complete: () => console.log('get user repo completed...'),
       });
     }
   }
