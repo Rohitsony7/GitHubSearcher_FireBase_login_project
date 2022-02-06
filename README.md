@@ -31,19 +31,20 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 1.
-
-<img width="1440" alt="Screenshot 2022-02-06 at 4 30 24 AM" src="https://user-images.githubusercontent.com/31543760/152682014-9811060e-015a-4acd-8cd5-d57a862a2708.png">
+<img width="1440" alt="Screenshot 2022-02-06 at 6 38 46 PM" src="https://user-images.githubusercontent.com/31543760/152682399-a384dcc2-378a-4a82-9014-dfe2ebfc7dea.png">
 
 2. 
-
 <img width="1440" alt="Screenshot 2022-02-06 at 4 31 13 AM" src="https://user-images.githubusercontent.com/31543760/152682021-b0b89cbc-e82f-4d3a-8e45-a8d1d11db5c0.png">
 
-3
-
+3.
 <img width="1440" alt="Screenshot 2022-02-06 at 4 30 43 AM" src="https://user-images.githubusercontent.com/31543760/152682024-0227d7ce-5138-4fca-aa98-791fcc56851a.png">
 
-4
+4.
 <img width="1440" alt="Screenshot 2022-02-06 at 4 38 01 AM" src="https://user-images.githubusercontent.com/31543760/152682026-9ad98864-2652-49e4-a0e8-bee70584c29b.png">
 
-5
+5. 
 <img width="1440" alt="Screenshot 2022-02-06 at 4 31 52 AM" src="https://user-images.githubusercontent.com/31543760/152682027-0b24f681-0f1f-4e3d-848b-4b19494cbaa1.png">
+
+
+
+
