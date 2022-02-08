@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 
+//firebase method
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['signin']);
 const redirectLoggedInToHome = () => redirectLoggedInTo(['home']);
 
@@ -27,12 +28,13 @@ const routes: Routes = [
   },
   {
     //if anyone is not authorized redirect to login
-    path: '',
+    path: '', // represnt the default or home route
     component: HomeComponent,
     canActivate: [AngularFireAuthGuard],
     data: { authGuardPipe: redirectUnauthorizedToLogin },
   },
   {
+    //order of this wild card imp
     // this(** or rest all the things) must be at the bottom
     path: '**',
     component: PageNotFoundComponent,
