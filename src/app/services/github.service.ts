@@ -23,7 +23,7 @@ export class GithubService {
           this.errorMsg = this.getServerErrorMessage(error);
         }
 
-        return throwError(() => new Error(this.errorMsg));
+        throw new Error(this.errorMsg);
       })
     );
   }
